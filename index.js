@@ -1,14 +1,14 @@
 const express = require("express");
 const app = express();
 
-//port findout
+//port find out
 require("dotenv").config();
 const PORT = process.env.PORT || 3000;
 
 //middleware
 app.use(express.json());
 
-const blogs = require("./routes/blog")
+const blog = require("./routes/blog")
 
 //mount
 app.use("/api/v1", blog);
